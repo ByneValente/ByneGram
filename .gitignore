@@ -1,0 +1,29 @@
+# Android build files
+/build/
+/.gradle/
+/.idea/
+/local.properties
+*.iml
+*.log
+captures/
+
+# Android generated
+/gen/
+/proguard/
+/app/build/
+*.apk
+*.ap_
+*.aab
+
+# System files
+.DS_Store
+Thumbs.db
+*.orig
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Large files - они будут в LFS, поэтому игнорируем здесь
+# Но LFS их перехватит!
