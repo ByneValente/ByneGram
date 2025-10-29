@@ -1,41 +1,20 @@
-name: Build ByneGram APK
+name: Debug Build
 
-on: [push, workflow_dispatch]
+on: [push]
 
 jobs:
-  build:
+  debug:
     runs-on: ubuntu-latest
-    
     steps:
     - uses: actions/checkout@v4
-      
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-        
-    - name: Setup Android SDK
-      uses: android-actions/setup-android@v3
-      
-    - name: Make gradlew executable
-      run: chmod +x ./TMessagesProj/gradlew
-      
-    - name: Build APK
+    
+    - name: List project structure
       run: |
-        cd TMessagesProj
-        ./gradlew assembleRelease --stacktrace
+        ls -la
+        echo "=== TMessagesProj contents ==="
+        ls -la TMessagesProj/
         
-    - name: Find and Upload APK
+    - name: Check gradle files
       run: |
-        find . -name "*.apk" -type f
-      shell: bash
-      
-    - name: Upload APK
-      uses: actions/upload-artifact@v4
-      with:
-        name: ByneGram-APK
-        path: |
-          TMessagesProj/app/build/outputs/apk/**/*.apk
-          TMessagesProj/build/outputs/apk/**/*.apk
-        retention-days: 30
+        find . -name "build.gradle" -type f
+        find . -name "gradlew" -type f
