@@ -1,0 +1,25 @@
+name: Debug Project Structure
+
+on: [workflow_dispatch]
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Проверка структуры проекта
+      run: |
+        echo "=== КОРНЕВАЯ ПАПКА ==="
+        ls -la
+        echo ""
+        echo "=== ПАПКА TMessagesProj ==="
+        ls -la TMessagesProj/
+        echo ""
+        echo "=== ФАЙЛЫ GRADLE ==="
+        find . -name "gradlew" -type f
+        find . -name "build.gradle" -type f
+        find . -name "settings.gradle" -type f
+        echo ""
+        echo "=== ANDROID MANIFEST ==="
+        find . -name "AndroidManifest.xml" -type f
