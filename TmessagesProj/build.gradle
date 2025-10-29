@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 plugins {
     id 'com.android.application'
 }
 
 android {
     compileSdk 34
-
+    
     defaultConfig {
         applicationId "org.telegram.messenger"
         minSdk 21
@@ -13,7 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
     }
-
+    
     buildTypes {
         release {
             minifyEnabled false
@@ -23,7 +22,7 @@ android {
             debuggable true
         }
     }
-
+    
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -34,20 +33,4 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
-=======
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
-    repositories {
-        mavenCentral()
-        google()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.0'
-        classpath 'com.google.gms:google-services:4.3.15'
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.5'
-    }
-}
-repositories {
-    google()
->>>>>>> 31469075114a40b829e0861256f8bbbe68975171
 }

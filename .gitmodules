@@ -1,0 +1,3 @@
+[submodule "TMessagesProj/src/main/java/com/radolyn/ByneGram/proprietary"]
+	path = TMessagesProj/src/main/java/com/radolyn/ByneGram/proprietary
+	url = https://github.com/ByneGram/ByneGram4A_proprietary.git

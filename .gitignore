@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Android build files
 /build/
 /.gradle/
@@ -27,3 +28,21 @@ Thumbs.db
 
 # Large files - они будут в LFS, поэтому игнорируем здесь
 # Но LFS их перехватит!
+=======
+TMessagesProj/.externalNativeBuild/
+TMessagesProj/src/main/java/com/exteragram/messenger/boost/
+.gradle/
+.idea/
+build/
+.cxx/
+obj/
+
+output-metadata.json
+local.properties
+API_KEYS
+
+*.hprof
+*.iml
+*.apk
+*.so
+>>>>>>> 31469075114a40b829e0861256f8bbbe68975171
