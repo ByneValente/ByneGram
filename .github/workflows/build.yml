@@ -1,18 +1,13 @@
 name: Build ByneGram APK
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push, workflow_dispatch]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4
       
     - name: Set up JDK 17
       uses: actions/setup-java@v4
@@ -20,17 +15,27 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         
-    - name: Change wrapper permissions
-      run: chmod +x ./gradlew
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
       
-    - name: Build Release APK
+    - name: Make gradlew executable
+      run: chmod +x ./TMessagesProj/gradlew
+      
+    - name: Build APK
       run: |
         cd TMessagesProj
-        ./gradlew assembleRelease --no-daemon --stacktrace
+        ./gradlew assembleRelease --stacktrace
         
-    - name: Upload APK Artifact
+    - name: Find and Upload APK
+      run: |
+        find . -name "*.apk" -type f
+      shell: bash
+      
+    - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: ByneGram-App
-        path: TMessagesProj/app/build/outputs/apk/release/*.apk
-        retention-days: 7
+        name: ByneGram-APK
+        path: |
+          TMessagesProj/app/build/outputs/apk/**/*.apk
+          TMessagesProj/build/outputs/apk/**/*.apk
+        retention-days: 30
