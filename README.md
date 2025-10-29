@@ -68,12 +68,6 @@ Follow our **[Telegram channel](https://t.me/ByneGram)** and join our [chat](htt
 Preview versions can be downloaded
 from the **[dedicated topic](https://t.me/ByneGramGroup)**.
 
-## Want to throw some money?
-
-Developing ByneGram is not such a simple task.
-**We'd be grateful for any donation <3**
-
-All available methods can be found **[here](https://ayusync.cloud/ui/donate)**.
 
 ## AyuSync? What is it?
 
