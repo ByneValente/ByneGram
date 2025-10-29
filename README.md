@@ -11,7 +11,7 @@ some patches from [Telegraher](https://github.com/nikitasius/Telegraher).
 
 But it's not just exteraGram with Telegraher's commits, **it's a fully reworked version**.
 
-The main difference between ByneGram and Telegraher is that ByneGram **saves** your messages history,
+ The main difference between ByneGram and Telegraher is that ByneGram **saves** your messages history,
 while Telegraher just **caches** them.
 It means that you can clean your cache and still have all saved messages.
 
