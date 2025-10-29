@@ -1,34 +1,16 @@
-# Gradle files
+TMessagesProj/.externalNativeBuild/
+TMessagesProj/src/main/java/com/exteragram/messenger/boost/
 .gradle/
-build/
-
-# Local configuration file (sdk path, etc)
-local.properties
-
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.aab
-*.apk
-output-metadata.json
-
-# IntelliJ
-*.iml
 .idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+build/
+.cxx/
+obj/
 
-# Keystore files
-*.jks
-*.keystore
+output-metadata.json
+local.properties
+API_KEYS
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
-# Android Profiling
 *.hprof
+*.iml
+*.apk
+*.so
